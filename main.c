@@ -36,8 +36,8 @@
 xSemaphoreHandle wifi_on;
 xSemaphoreHandle mqtt;
 
-#define WIFI_SSID "FAMILIA AVENDANO"
-#define WIFI_PASS "27ZJM2510R"
+#define WIFI_SSID ""
+#define WIFI_PASS ""
 
 char buff[50] = {0};
 
