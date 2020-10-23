@@ -101,7 +101,7 @@ void bmp280(void *pvParamters){
     printf("Conectando a wifi\r\n");
 
     esp_mqtt_client_config_t mqtt_cfg = {
-          .host = "192.168.1.57",
+          .host = "Host IP",
           .event_handle = mqtt_event_handler,
   		    .lwt_topic = "testament",
   		    .lwt_msg = "electricaribe_HP",
@@ -112,7 +112,7 @@ void bmp280(void *pvParamters){
       esp_mqtt_client_start(client);
 
       xSemaphoreTake(mqtt, portMAX_DELAY);
-      printf("Subscrito a Broker\r\n");
+      printf("Broker connected\r\n");
       float temp;
       char c[50];
     while (1){
@@ -143,7 +143,7 @@ void bmp280(void *pvParamters){
 void main_task(void){
 
   esp_mqtt_client_config_t mqtt_cfg = {
-        .host = "192.168.1.57",
+        .host = "Host IP",
         .event_handle = mqtt_event_handler,
         .lwt_topic = "testament",
         .lwt_msg = "electricaribe_HP",
