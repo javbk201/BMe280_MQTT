@@ -36,8 +36,8 @@
 xSemaphoreHandle wifi_on;
 xSemaphoreHandle mqtt;
 
-#define WIFI_SSID ""
-#define WIFI_PASS ""
+#define WIFI_SSID "" // Nombre de la red
+#define WIFI_PASS ""  //contraseña de la red
 
 char buff[50] = {0};
 
@@ -113,7 +113,6 @@ void bmp280(void *pvParamters){
 
       xSemaphoreTake(mqtt, portMAX_DELAY);
       printf("Broker connected\r\n");
-      float temp;
       char c[50];
     while (1){
       delay_ms(15000);
